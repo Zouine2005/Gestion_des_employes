@@ -20,25 +20,72 @@ class DepartementController extends Controller
         return view('departement.create');
     }
 
+    
+
+    public function store(Departement $departement,SaveDepartementRequest $request)
+{
+    try {
+        // Validation pour s'assurer que le nom est unique
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255|unique:departements,name',
+        ], [
+            'name.required' => 'Le champ nom est obligatoire.',
+            'name.unique' => 'Le nom du département existe déjà.',
+        ]);
+
+        // Création du département
+        $departement = new Departement();
+        $departement->name = $validatedData['name'];
+        $departement->save();
+
+        // Redirection avec un message de succès
+        return redirect()->route('departement.index')->with('success', 'Département enregistré avec succès.');
+    } catch (Exception $e) {
+        // Gérer les erreurs (par exemple : journalisation)
+        \Log::error($e->getMessage());
+
+        // Redirection avec un message d'erreur générique
+        return back()->withErrors(['error' => 'Une erreur est survenue lors de la création du département.']);
+    }
+
+}
     public function edit(Departement $departement)
     {
-        return view('departement.edit', compact('departement'));
+            return view('departement.edit', compact('departement'));
     }
-
-    public function store(SaveDepartementRequest $request)
+    public function update(Departement $departement,SaveDepartementRequest $request)
     {
         try {
-         
-            $departement = new Departement();
             $departement->name = $request->name;
-           
-            $departement->save();
-
-            return redirect()->route('departement.index')->with('success', 'Departement created successfully.');
+            $departement->update();
+    
+            // Redirection avec un message de succès
+            return redirect()->route('departement.index')->with('success', 'Département a ete modifie.');
         } catch (Exception $e) {
-            // Handle the exception (optional logging)
-            \Log::error($e);
-            return back()->withErrors(['error' => 'There was an error creating the departement.']);
+            // Gérer les erreurs (par exemple : journalisation)
+            \Log::error($e->getMessage());
+    
+            // Redirection avec un message d'erreur générique
+            return back()->withErrors(['error' => 'Une erreur est survenue lors de la création du département.']);
         }
+    
     }
+    public function delete(Departement $departement)
+    {
+        try {
+            $departement->delete();
+    
+            // Redirection avec un message de succès
+            return redirect()->route('departement.index')->with('success', 'Département a ete supprime.');
+        } catch (Exception $e) {
+            // Gérer les erreurs (par exemple : journalisation)
+            \Log::error($e->getMessage());
+    
+            // Redirection avec un message d'erreur générique
+            return back()->withErrors(['error' => 'Une erreur est survenue lors de la création du département.']);
+        }
+    
+    }
+
+
 }

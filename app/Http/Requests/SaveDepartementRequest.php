@@ -14,7 +14,7 @@ class SaveDepartementRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|unique:departement ,name', // Example rule
+            'name' => 'required|string|max:255|unique:departements,name', // Example rule
         ];
     }
 
