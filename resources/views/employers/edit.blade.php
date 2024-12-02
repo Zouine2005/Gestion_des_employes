@@ -19,12 +19,12 @@
                     
                     <div class="mb-3">
                         <label for="first_name" class="form-label">Prénom</label>
-                        <input type="text" class="form-control" id="first_name" placeholder="Entrez le prénom" name="first_name" value="{{ $employer->first_name }}" required>
+                        <input type="text" class="form-control" id="first_name" placeholder="Entrez le prénom" name="first_name" value="{{ $employer->prenom }}" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="last_name" class="form-label">Nom de Famille</label>
-                        <input type="text" class="form-control" id="last_name" placeholder="Entrez le nom de famille" name="last_name" value="{{ $employer->last_name }}" required>
+                        <input type="text" class="form-control" id="last_name" placeholder="Entrez le nom de famille" name="last_name" value="{{ $employer->nom }}" required>
                     </div>
 
                     <div class="mb-3">
@@ -34,7 +34,7 @@
 
                     <div class="mb-3">
                         <label for="phone" class="form-label">Téléphone</label>
-                        <input type="text" class="form-control" id="phone" placeholder="Entrez le numéro de téléphone" name="phone" value="{{ $employer->phone }}" required>
+                        <input type="text" class="form-control" id="phone" placeholder="Entrez le numéro de téléphone" name="phone" value="{{ $employer->contact }}" required>
                     </div>
 
                     <div class="mb-3">

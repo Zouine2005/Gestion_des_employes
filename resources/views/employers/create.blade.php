@@ -31,7 +31,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="setting-input-1" class="form-label">Nom</label>
-                        <input type="text" class="form-control" id="setting-input-1" placeholder="Entrez le nom de l'employes" name="frist_name" required>
+                        <input type="text" class="form-control" id="setting-input-1" placeholder="Entrez le nom de l'employes" name="first_name" required>
                     </div>
                     <div class="mb-3">
                         <label for="setting-input-2" class="form-label">Prenom</label>
