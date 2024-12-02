@@ -24,7 +24,7 @@ class EmployerController extends Controller
     try {
         // Création d'un nouvel employé
         $employer = new Employer();
-        $employer->nom = $request->input('frist_name');
+        $employer->nom = $request->input('first_name');
         $employer->prenom = $request->input('last_name');
         $employer->email = $request->input('email');
         $employer->contact = $request->input('phone');
