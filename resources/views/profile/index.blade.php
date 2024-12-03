@@ -1,7 +1,6 @@
 @extends('layouts.template')
 
 @section('content')
-<h1>Liste des Utilisateurs</h1>
 
 @if(session('success'))
     <div class="alert alert-success">{{ session('success') }}</div>
