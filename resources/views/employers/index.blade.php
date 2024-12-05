@@ -22,13 +22,11 @@
                     
                 </div><!--//col-->
                 <div class="col-auto">
-                    
-                    <select class="form-select w-auto" >
-                          <option selected value="option-1">All</option>
-                          <option value="option-2">This week</option>
-                          <option value="option-3">This month</option>
-                          <option value="option-4">Last 3 months</option>
-                          
+                    <select class="form-select w-auto">
+                        <option selected value="all">Tous</option>
+                        <option value="this-month">Ce mois</option>
+                        <option value="last-month">Le mois dernier</option>
+                        <option value="this-year">Cette année</option>
                     </select>
                 </div>
                 <div class="col-auto">						    
