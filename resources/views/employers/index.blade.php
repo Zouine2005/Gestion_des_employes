@@ -8,12 +8,15 @@
          <div class="page-utilities">
             <div class="row g-2 justify-content-start justify-content-md-end align-items-center">
                 <div class="col-auto">
-                    <form class="table-search-form row gx-1 align-items-center">
+                    <form class="table-search-form row gx-1 align-items-center" method="GET" action="{{ route('employer.index') }}">
                         <div class="col-auto">
-                            <input type="text" id="search-orders" name="searchorders" class="form-control search-orders" placeholder="Search">
+                            <input type="text" id="search-orders" name="searchorders" 
+                                   class="form-control search-orders" 
+                                   placeholder="Rechercher par nom" 
+                                   value="{{ request('searchorders') }}">
                         </div>
                         <div class="col-auto">
-                            <button type="submit" class="btn app-btn-secondary">Search</button>
+                            <button type="submit" class="btn app-btn-secondary">Rechercher</button>
                         </div>
                     </form>
                     
@@ -87,7 +90,9 @@
                                 <td class="cell">{{ $item->email }}</td>
                                 <td class="cell">{{ $item->contact }}</td>
                                 <td class="cell">{{ $item->montant_journalier }}</td>
-                                <td class="cell">{{ $item->departement->name}}</td>
+                                <td class="cell">
+                                    {{ $item->departement ? $item->departement->name : 'Aucun département' }}
+                                </td>
                                 <td class="cell">
                                     <!-- Bouton Modifier -->
                                     <a href="{{ route('employer.edit', $item->id) }}" class="btn btn-primary btn-sm">Modifier</a>
