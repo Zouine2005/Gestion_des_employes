@@ -11,10 +11,22 @@ use Exception; // Import Exception class
 
 class EmployerController extends Controller
 {
-    public function index(){
-        $employers= Employer::paginate(10);
-        return view('employers.index',compact('employers'));
+    public function index(Request $request)
+{
+    $search = $request->input('searchorders'); // Récupérer le terme de recherche
+    $query = Employer::query();
+
+    if ($search) {
+        // Filtrer les employés par nom ou prénom
+        $query->where('nom', 'LIKE', "%$search%")
+              ->orWhere('prenom', 'LIKE', "%$search%");
     }
+
+    $employers = $query->paginate(10);
+
+    return view('employers.index', compact('employers'));
+}
+
     public function create(){
         $departements = Departement::all();
         return view('employers.create',compact('departements'));
