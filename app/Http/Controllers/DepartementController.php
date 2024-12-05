@@ -9,11 +9,20 @@ use Exception; // Import Exception class
 
 class DepartementController extends Controller
 {
-    public function index()
-    {
-        $departement = Departement::paginate(10);
-        return view('departement.index', compact('departement'));
+    public function index(Request $request)
+{
+    $search = $request->input('searchorders'); // Récupérer le terme de recherche
+    $query = Departement::query();
+
+    if ($search) {
+        // Filtrer les employés par nom ou prénom
+        $query->where('name', 'LIKE', "%$search%");
     }
+
+    $departement = $query->paginate(10);
+
+    return view('departement.index', compact('departement'));
+}
 
     public function create()
     {
