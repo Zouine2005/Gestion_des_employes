@@ -9,9 +9,19 @@ use Exception;
 
 class ConfigurationController extends Controller
 {
-    public function index()
+    public function index(Request $request)
 {
-    $allConfigurations = Configuration::latest()->paginate(10); // Pour vérifier si des données sont récupérées
+    $search = $request->input('searchorders'); // Récupérer le terme de recherche
+    $query = Configuration::query();
+
+    if ($search) {
+        // Filtrer les employés par nom ou prénom
+        $query->where('type', 'LIKE', "%$search%")
+        ->orWhere('value', 'LIKE', "%$search%");
+    }
+
+    $allConfigurations = $query->paginate(10);
+
     return view('config.index', compact('allConfigurations'));
 }
     public function create()
