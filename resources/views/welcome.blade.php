@@ -49,10 +49,10 @@
         </div>
       </div>
       <div class="social-links d-none d-md-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-youtube"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.youtube.com/channel/UCFK07CPgMCP0JDIl-op6bcQ" class="twitter"><i class="bi bi-youtube"></i></a>
+        <a href="https://www.facebook.com/MoonyMaroc" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/farinesmoony/" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/moony-farines/" class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
 
     </div><!-- End Top Bar -->
@@ -277,7 +277,7 @@
                 <i class="bi bi-clock flex-shrink-0"></i>
                 <div>
                   <h3>heures de travail:</h3>
-                  <p>Mon-Sat: 9AM - 18PM</p>
+                  <p>Lun-Sam: 9AM - 18PM</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -334,11 +334,11 @@
             <span class="sitename">GES</span>
           </a>
           <p>Notre application de gestion des employés est conçue pour simplifier et optimiser la gestion des ressources humaines au sein de votre organisation. Grâce à une interface intuitive et conviviale, vous pouvez facilement suivre les informations essentielles de vos employés, gérer les absences, les congés, et évaluer les performances.</p>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+          <div class="social-links d-none d-md-flex align-items-center">
+            <a href="https://www.youtube.com/channel/UCFK07CPgMCP0JDIl-op6bcQ" class="twitter"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.facebook.com/MoonyMaroc" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/farinesmoony/" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/moony-farines/" class="linkedin"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
 
