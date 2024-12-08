@@ -21,14 +21,6 @@
                     </form>
                     
                 </div><!--//col-->
-                <div class="col-auto">
-                    <select class="form-select w-auto">
-                        <option selected value="all">Tous</option>
-                        <option value="this-month">Ce mois</option>
-                        <option value="last-month">Le mois dernier</option>
-                        <option value="this-year">Cette année</option>
-                    </select>
-                </div>
                 <div class="col-auto">						    
                     <a class="btn app-btn-secondary" href="{{route('employer.create')}}">
                         <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle me-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
