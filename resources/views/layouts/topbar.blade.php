@@ -18,9 +18,9 @@
                    
                     <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"><img src="{{asset('assets/images/user1.jpg')}}" alt="user profile"></a>
                     <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
-                        <li><a class="dropdown-item" href="{{route('profile.index')}}">Account</a></li>
+                        <li><a class="dropdown-item" href="{{route('profile.index')}}">Profile</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="{{route('logout')}}">Log Out</a></li>
+                        <li><a class="dropdown-item" href="{{route('logout')}}">Deconnecter</a></li>
                     </ul>
                 </div><!--//app-user-dropdown--> 
             </div><!--//app-utilities-->
