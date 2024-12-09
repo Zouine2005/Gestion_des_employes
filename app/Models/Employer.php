@@ -9,6 +9,17 @@ class Employer extends Model
 {
     use HasFactory;
    
+    protected $fillable = [
+        'nom', 'prenom', 'email', 'contact', 'departement_id'
+    ];
+
+    /**
+     * Un employé peut avoir plusieurs paiements.
+     */
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
+    }
     public function departement()
     {
         return $this->belongsTo(Departement::class);
