@@ -5,7 +5,9 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ConfigurationController;
 use App\Http\Controllers\EmployerController;
 use App\Http\Controllers\DepartementController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Payment;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,7 +47,7 @@ Route::middleware('auth')->group(function(){
             Route::post('/create', [DepartementController::class, 'store'])->name('departement.store');
             Route::get('/edit/{departement}', [DepartementController::class, 'edit'])->name('departement.edit');
             Route::put('/update/{departement}', [DepartementController::class, 'update'])->name('departement.update');
-            Route::get('/{departement}',[DepartementController::class, 'delete'])->name('departement.delete');
+            Route::delete('/delete/{departement}',[DepartementController::class, 'delete'])->name('departement.delete');
 
             });
         Route::prefix('configurations')->group(function () {
@@ -61,6 +63,16 @@ Route::middleware('auth')->group(function(){
             Route::get('/',[ProfileController::class,'index'])->name('profile.index');
             Route::get('/edit/{id}', [ProfileController::class, 'edit'])->name('profile.edit');
             Route::put('/{id}', [ProfileController::class, 'update'])->name('profile.update');
+        });
+
+        Route::prefix('payments')->group(function () {
+            Route::get('/', [PaymentController::class, 'index'])->name('payments.index');
+            Route::get('/create', [PaymentController::class, 'create'])->name('payments.create');
+            Route::post('/store', [PaymentController::class, 'store'])->name('payments.store');
+            Route::get('/edit/{payment}', [PaymentController::class, 'edit'])->name('payments.edit');
+            Route::put('/update/{payment}', [PaymentController::class, 'update'])->name('payments.update');
+            Route::delete('/payments/{payment}', [PaymentController::class, 'destroy'])->name('payments.delete');
+            Route::get('/payments/{id}/pdf', [PaymentController::class, 'downloadPDF'])->name('payments.pdf');
         });
 
 
