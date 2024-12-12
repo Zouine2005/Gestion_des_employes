@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ConfigurationController;
 use App\Http\Controllers\EmployerController;
 use App\Http\Controllers\DepartementController;
+use App\Http\Controllers\LeaveController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Payment;
@@ -74,6 +75,8 @@ Route::middleware('auth')->group(function(){
             Route::delete('/payments/{payment}', [PaymentController::class, 'destroy'])->name('payments.delete');
             Route::get('/payments/{id}/pdf', [PaymentController::class, 'downloadPDF'])->name('payments.pdf');
         });
+
+        Route::resource('leaves', LeaveController::class);
 
 
 
