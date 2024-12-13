@@ -8,7 +8,7 @@ use App\Http\Controllers\DepartementController;
 use App\Http\Controllers\LeaveController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProfileController;
-use App\Models\Payment;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +25,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/send-message', [ContactController::class, 'send'])->name('send.message');
+
 Route::get('/login',[AuthController::class, 'login'])->name('login');
 Route::post('/login',[AuthController::class, 'handleLogin'])->name('handlelogin');
 Route::get('/lougout',[AuthController::class, 'logout'])->name('logout');
