@@ -8,12 +8,15 @@
          <div class="page-utilities">
             <div class="row g-2 justify-content-start justify-content-md-end align-items-center">
                 <div class="col-auto">
-                    <form class="table-search-form row gx-1 align-items-center">
+                    <form class="table-search-form row gx-1 align-items-center" method="GET" action="{{ route('configurations.index') }}">
                         <div class="col-auto">
-                            <input type="text" id="search-orders" name="searchorders" class="form-control search-orders" placeholder="Search">
+                            <input type="text" id="search-orders" name="searchorders" 
+                                   class="form-control search-orders" 
+                                   placeholder="Rechercher" 
+                                   value="{{ request('searchorders') }}">
                         </div>
                         <div class="col-auto">
-                            <button type="submit" class="btn app-btn-secondary">Search</button>
+                            <button type="submit" class="btn app-btn-secondary">Rechercher</button>
                         </div>
                     </form>
                     
@@ -24,7 +27,7 @@
 <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
 <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
 </svg>
-                        Nouvel configurations
+                        Nouvel configuration
                     </a>
                 </div>
             </div><!--//row-->
@@ -63,11 +66,13 @@
                                 <td class="cell"><span class="truncate">{{ $config->type }}</span></td>
                                 <td class="cell"><span class="truncate">{{ $config->value }}</span></td>
                                 <td class="cell">
-                                    <a class="btn-sm app-btn-secondary" href="{{ route('configuration.edit', $config->id) }}">Modifier</a>
-                                    <form method="POST" action="{{ route('configuration.delete', $config->id) }}" style="display:inline;">
+                                    <a href="{{ route('configuration.edit', $config->id) }}" class="btn btn-primary btn-sm">Modifier</a>
+                                    <form action="{{ route('configuration.delete', $config->id) }}" method="POST" style="display:inline;">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn-sm app-btn-secondary" onclick="return confirm('Voulez-vous vraiment supprimer cette configuration ?')">Supprimer</button>
+                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette configuration ?')">
+                                            Supprimer
+                                        </button>
                                     </form>
                                 </td>
                             </tr>
