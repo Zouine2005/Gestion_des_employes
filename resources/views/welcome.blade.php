@@ -44,15 +44,14 @@
     <div class="topbar d-flex align-items-center">
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
-          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@moony.com">contact@moony.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+(212) 5 37 75 50 55</span></i>
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:zouine@gmail.com">zouine@gmail.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+(212) 6 05 46 77 58</span></i>
         </div>
       </div>
       <div class="social-links d-none d-md-flex align-items-center">
-        <a href="https://www.youtube.com/channel/UCFK07CPgMCP0JDIl-op6bcQ" class="twitter"><i class="bi bi-youtube"></i></a>
-        <a href="https://www.facebook.com/MoonyMaroc" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/farinesmoony/" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/moony-farines/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://twitter.com/MohamadeZouine" class="twitter" target="_blank"><i class="bi bi-twitter"></i></a>
+        <a href="https://github.com/Zouine2005" class="instagram" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/mohamed-zouine-5716a2252" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
       </div>
 
     </div><!-- End Top Bar -->
@@ -60,10 +59,10 @@
     <div class="branding d-flex align-items-cente">
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center">
+        <a href="" class="logo d-flex align-items-center">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="assetss/img/logo.png" alt=""> -->
-          <h1 class="sitename">Moony</h1>
+          <h1 class="sitename">GES</h1>
           <span>.</span>
         </a>
 
@@ -140,9 +139,9 @@
         <div class="content row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
           <div class="col-xl-10">
             <div class="text-center">
-              <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox play-btn"></a>
+              <a href="https://www.youtube.com/watch?v=amnXetXnv5c" class="glightbox play-btn" target="_blank"></a>
               <h3>Voir</h3>
-              <a class="cta-btn" href="#">Cliquer ici </a>
+              <a class="cta-btn" href="https://www.youtube.com/watch?v=amnXetXnv5c" target="_blank">Cliquer ici </a>
             </div>
           </div>
         </div>
@@ -252,8 +251,7 @@
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h3>Address</h3>
-                  <p>Zone industrielle de bouznika,
-                    Lot 29.30.31 et 33 Bouznika –Maroc</p>
+                  <p>Maroc</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -261,7 +259,7 @@
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
                   <h3>Tel</h3>
-                  <p>+(212) 5 37 75 50 55</p>
+                  <p>+(212) 6 05 46 77 58</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -269,7 +267,7 @@
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>Email </h3>
-                  <p>contact@moony.com</p>
+                  <p>zouine@gmail.com</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -290,15 +288,15 @@
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <input type="text" name="name" class="form-control" placeholder="Votre Nom" required="">
                 </div>
 
                 <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  <input type="email" class="form-control" name="email" placeholder="Votre Email" required="">
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  <input type="text" class="form-control" name="subject" placeholder="Sujet" required="">
                 </div>
 
                 <div class="col-md-12">
@@ -310,7 +308,7 @@
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
 
-                  <button type="submit">Send Message</button>
+                  <button type="submit">Envoyer votre message</button>
                 </div>
 
               </div>
@@ -335,10 +333,9 @@
           </a>
           <p>Notre application de gestion des employés est conçue pour simplifier et optimiser la gestion des ressources humaines au sein de votre organisation. Grâce à une interface intuitive et conviviale, vous pouvez facilement suivre les informations essentielles de vos employés, gérer les absences, les congés, et évaluer les performances.</p>
           <div class="social-links d-none d-md-flex align-items-center">
-            <a href="https://www.youtube.com/channel/UCFK07CPgMCP0JDIl-op6bcQ" class="twitter"><i class="bi bi-youtube"></i></a>
-            <a href="https://www.facebook.com/MoonyMaroc" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/farinesmoony/" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/moony-farines/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            <a href="https://twitter.com/MohamadeZouine" class="twitter" target="_blank"><i class="bi bi-twitter"></i></a>
+            <a href="https://github.com/Zouine2005" class="instagram" target="_blank"><i class="bi bi-github"></i></a>
+            <a href="https://www.linkedin.com/in/mohamed-zouine-5716a2252" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
 
@@ -347,28 +344,24 @@
           <ul>
             <li><a href="#">Acceuil</a></li>
             <li><a href="#">À propos de nous            </a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>Zone industrielle de bouznika</p>
-          <p>Lot 29.30.31 et 33 Bouznika</p>
+          <h4>Contact </h4>
           <p>Maroc</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+(212) 5 37 75 50 55</span></p>
-          <p><strong>Email:</strong> <span>contact@moony.com</span></p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+(212) 6 05 46 77 58</span></p>
+          <p><strong>Email:</strong> <span>zouine@gmail.com</span></p>
         </div>
 
       </div>
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">GES</strong>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">GES version01</strong>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
       </div>
     </div>
 

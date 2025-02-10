@@ -7,10 +7,10 @@
                 <a id="sidepanel-toggler" class="sidepanel-toggler d-inline-block d-xl-none" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img"><title>Menu</title><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg>
                 </a>
-            </div><!--//col-->
-            <div class="search-mobile-trigger d-sm-none col">
-                <i class="search-mobile-trigger-icon fas fa-search"></i>
-            </div><!--//col-->
+            </div>
+            <div class="col-auto">
+                <div id="currentTime" class="current-time"></div>
+            </div>
 
             <div class="app-utilities col-auto">
                 
@@ -26,6 +26,16 @@
             </div><!--//app-utilities-->
         </div><!--//row-->
         </div><!--//app-header-content-->
+        <script>
+            function updateTime() {
+                const timeElement = document.getElementById('currentTime');
+                const now = new Date();
+                const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZone: 'Europe/Paris' };
+                timeElement.textContent = now.toLocaleString('fr-FR', options); // Set locale to French
+            }
+            setInterval(updateTime, 1000);
+            updateTime();
+        </script>
     </div><!--//container-fluid-->
 </div><!--//app-header-inner-->
 
